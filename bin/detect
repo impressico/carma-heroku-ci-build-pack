@@ -1,8 +1,10 @@
-#!/usr/bin/env bash
+#!/bin/sh
+# Usage: bin/compile <build-dir>
 
-if [ -f $1/index.php ]; then
-  echo "PHP" && exit 0
+if [ -f $1/config/public/system/core/CodeIgniter.php ]; then
+  echo "CodeIgniter"
+  exit 0
 else
-  echo "no" && exit 1
+  exit 1
 fi
 
